@@ -24,5 +24,21 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+        bool Even = true;
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var button = ((Button)sender);
+            if (!string.IsNullOrEmpty((string?)button.Content)) return;
+            if (Even)
+                button.Content = "X";
+            else
+                button.Content = "O";
+            Even = !Even;
+            if ((Button1.Content.ToString() == "X") && (Button2.Content.ToString() == "X") && (Button3.Content.ToString() == "X"))
+            {
+
+            }
+                //MessageBox mb = new MessageBox("hi");
+        }
     }
 }
